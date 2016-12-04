@@ -19,19 +19,36 @@ $courses = $json_data['courses']['completed'];
     <style>
     body {
         font-family: 'Open Sans', sans-serif;
-        background-color:#F6F8F8;
+        background-color:#FCFFFE;
+        background-image:url('backgroundImage.png');
+        background-repeat:no-repeat;
+        background-size:100%;
+        background-position: 0px 80px;
+
     }
     h1 {
         font-family: 'Montserrat', sans-serif;
         color:#2B2B2B;
     }
     a {
-        font-size: 0.9em;
+        font-size: 1.0em;
+        font-weight:bold;
         text-decoration:none;
-        color:#6c6c6c;
+        color:#1649A0;
     }
+    a:hover {
+        text-decoration:underline;
+        color:#2760AE;
+    }
+
     hr {
         color:#6c6c6c;
+    }
+
+    @media (max-width:582px) {
+       body {
+           background-position: 0px 120px;
+       }
     }
 
 
@@ -39,7 +56,7 @@ $courses = $json_data['courses']['completed'];
 </head>
 <body>
     <header>
-        <h1>My Badges from CodeSchool.com</h1>
+        <h1>My Badges from <a target="_blank" href="http://www.codeschool.com">CodeSchool.com</a></h1>
     </header>
 
     <hr/>
@@ -50,8 +67,8 @@ $courses = $json_data['courses']['completed'];
             foreach ($courses as $course) {
                 echo '<div">';
                     echo '<div style="float:left;width:300px;overflow:auto;padding:10px;">';
-                        echo '<div style="float:left;"><img style="width:100px;" src="' . $course["badge"] . '"/></div>';
-                        echo '<div style="float:left;height:55px;width:190px;padding-left:10px;padding-top:35px;"><a style="word-wrap:break-word;" href="' . $course["url"] . '">' . $course["title"] . '</a></div>';
+                        echo '<div style="float:left;"><a  target="_blank" href="' . $course["url"] . '"><img style="width:100px;" src="' . $course["badge"] . '"/></a></div>';
+                        echo '<div style="float:left;height:55px;width:190px;padding-left:10px;padding-top:25px;"><a target="_blank" style="word-wrap:break-word;" href="' . $course["url"] . '">' . $course["title"] . '</a></div>';
                     echo '</div>';
                 echo '</div>';
             }
