@@ -12,18 +12,21 @@ $courses = $json_data['courses']['completed'];
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title><?php echo $json_data['user']['username']; ?>'s badges</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 
     <style>
     body {
-        font-family: 'Open Sans', sans-serif;
+        /* font-family: 'Open Sans', sans-serif; */
+        font-family: 'Signika', sans-serif;
         background-color:#FCFFFE;
         background-image:url('backgroundImage.png');
         background-repeat:no-repeat;
         background-size:100%;
-        background-position: 0px 80px;
+        background-position: 0px 82px;
 
     }
     h1 {
@@ -47,7 +50,7 @@ $courses = $json_data['courses']['completed'];
 
     @media (max-width:582px) {
        body {
-           background-position: 0px 120px;
+           background-position: 0px 122px;
        }
     }
 
@@ -78,8 +81,8 @@ $courses = $json_data['courses']['completed'];
 
     <hr/>
 
-    <footer style="margin-top:20px;font-size:0.7em;font-style:italic;">
-        <p>&copy 2016. Robert Giffin</p>
+    <footer style="margin-top:20px;margin-bottom:10px;font-size:0.7em;">
+        <p>&copy 2016. Robert Giffin</p><br/><br/>
     </footer>
 </body>
 </html>
